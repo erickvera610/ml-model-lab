@@ -4,6 +4,10 @@ Train logistic regression from scratch on deterministic synthetic data and inspe
 
 An AI-assisted educational portfolio project prepared for Erik Vera's internship learning. This is a working prototype, not production software. Authorship and skills should be represented based on what you can explain and change independently.
 
+## Try in your browser
+
+[Open the live demo](https://erickvera610.github.io/ml-model-lab/). The static JavaScript demo runs on the visitor's device and cannot change repository code. The Python implementation below provides the local backend. ML random-number generators differ between runtimes, so exact metrics differ. Tracker browser storage is localStorage; Python storage is SQLite.
+
 ## Run in two minutes
 
 Requires Python 3.11 or newer; no pip dependencies.

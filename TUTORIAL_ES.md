@@ -65,3 +65,7 @@ En GitHub abre Compare & pull request. Describe qué cambiaste, por qué y cómo
 - How would you improve this for production?
 
 Respuesta base para practicar: “This is an AI-assisted learning project. I studied the core algorithm, ran the tests, and implemented [your actual change]. The main limitation is [specific limitation].” Sustituye los corchetes por trabajo que realmente hayas realizado.
+
+## 9. Demo pública sin instalar
+
+Abre https://erickvera610.github.io/ml-model-lab/ . Funciona con JavaScript en tu navegador; la versión Python se ejecuta con los pasos anteriores. Nadie recibe permiso para modificar tu repositorio por usar la demo. En el tracker, cada navegador guarda sus propios datos. En ML, Python y JavaScript usan generadores aleatorios distintos: no esperes exactamente los mismos puntajes. En ambos casos se separa entrenamiento y prueba.
