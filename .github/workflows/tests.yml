@@ -18,3 +18,6 @@ jobs:
         with:
           node-version: '22'
       - run: node test_demo.cjs
+
+      - name: Run ten fictional-data validation scenarios
+        run: python validate_scenarios.py

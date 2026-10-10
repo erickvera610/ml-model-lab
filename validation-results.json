@@ -1,0 +1,190 @@
+{
+  "project": "ml-model-lab",
+  "executed_at_utc": "2026-10-10T17:43:26.758313+00:00",
+  "kind": "actual automated validation using fictional or synthetic data",
+  "not_user_traffic": true,
+  "scenario_count": 10,
+  "passed": 10,
+  "results": [
+    {
+      "scenario": 1,
+      "input": {
+        "threshold": 0.05
+      },
+      "output_summary": {
+        "accuracy": 0.6833333333333333,
+        "precision": 0.6346153846153846,
+        "recall": 1.0,
+        "confusion_matrix": {
+          "TP": 33,
+          "TN": 8,
+          "FP": 19,
+          "FN": 0
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 2,
+      "input": {
+        "threshold": 0.15
+      },
+      "output_summary": {
+        "accuracy": 0.8,
+        "precision": 0.7441860465116279,
+        "recall": 0.9696969696969697,
+        "confusion_matrix": {
+          "TP": 32,
+          "TN": 16,
+          "FP": 11,
+          "FN": 1
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 3,
+      "input": {
+        "threshold": 0.25
+      },
+      "output_summary": {
+        "accuracy": 0.8,
+        "precision": 0.7692307692307693,
+        "recall": 0.9090909090909091,
+        "confusion_matrix": {
+          "TP": 30,
+          "TN": 18,
+          "FP": 9,
+          "FN": 3
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 4,
+      "input": {
+        "threshold": 0.35
+      },
+      "output_summary": {
+        "accuracy": 0.85,
+        "precision": 0.8333333333333334,
+        "recall": 0.9090909090909091,
+        "confusion_matrix": {
+          "TP": 30,
+          "TN": 21,
+          "FP": 6,
+          "FN": 3
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 5,
+      "input": {
+        "threshold": 0.45
+      },
+      "output_summary": {
+        "accuracy": 0.85,
+        "precision": 0.8529411764705882,
+        "recall": 0.8787878787878788,
+        "confusion_matrix": {
+          "TP": 29,
+          "TN": 22,
+          "FP": 5,
+          "FN": 4
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 6,
+      "input": {
+        "threshold": 0.55
+      },
+      "output_summary": {
+        "accuracy": 0.9,
+        "precision": 0.9354838709677419,
+        "recall": 0.8787878787878788,
+        "confusion_matrix": {
+          "TP": 29,
+          "TN": 25,
+          "FP": 2,
+          "FN": 4
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 7,
+      "input": {
+        "threshold": 0.65
+      },
+      "output_summary": {
+        "accuracy": 0.8666666666666667,
+        "precision": 0.9310344827586207,
+        "recall": 0.8181818181818182,
+        "confusion_matrix": {
+          "TP": 27,
+          "TN": 25,
+          "FP": 2,
+          "FN": 6
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 8,
+      "input": {
+        "threshold": 0.75
+      },
+      "output_summary": {
+        "accuracy": 0.7833333333333333,
+        "precision": 0.9166666666666666,
+        "recall": 0.6666666666666666,
+        "confusion_matrix": {
+          "TP": 22,
+          "TN": 25,
+          "FP": 2,
+          "FN": 11
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 9,
+      "input": {
+        "threshold": 0.85
+      },
+      "output_summary": {
+        "accuracy": 0.7333333333333333,
+        "precision": 0.9473684210526315,
+        "recall": 0.5454545454545454,
+        "confusion_matrix": {
+          "TP": 18,
+          "TN": 26,
+          "FP": 1,
+          "FN": 15
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 10,
+      "input": {
+        "threshold": 0.95
+      },
+      "output_summary": {
+        "accuracy": 0.6666666666666666,
+        "precision": 1.0,
+        "recall": 0.3939393939393939,
+        "confusion_matrix": {
+          "TP": 13,
+          "TN": 27,
+          "FP": 0,
+          "FN": 20
+        }
+      },
+      "passed": true
+    }
+  ]
+}
