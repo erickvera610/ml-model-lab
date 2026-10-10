@@ -1,0 +1,62 @@
+[
+  {
+    "threshold": 0.025
+  },
+  {
+    "threshold": 0.075
+  },
+  {
+    "threshold": 0.125
+  },
+  {
+    "threshold": 0.175
+  },
+  {
+    "threshold": 0.225
+  },
+  {
+    "threshold": 0.275
+  },
+  {
+    "threshold": 0.325
+  },
+  {
+    "threshold": 0.375
+  },
+  {
+    "threshold": 0.425
+  },
+  {
+    "threshold": 0.475
+  },
+  {
+    "threshold": 0.525
+  },
+  {
+    "threshold": 0.575
+  },
+  {
+    "threshold": 0.625
+  },
+  {
+    "threshold": 0.675
+  },
+  {
+    "threshold": 0.725
+  },
+  {
+    "threshold": 0.775
+  },
+  {
+    "threshold": 0.825
+  },
+  {
+    "threshold": 0.875
+  },
+  {
+    "threshold": 0.925
+  },
+  {
+    "threshold": 0.975
+  }
+]

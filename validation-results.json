@@ -1,24 +1,24 @@
 {
   "project": "ml-model-lab",
-  "executed_at_utc": "2026-10-10T17:43:26.758313+00:00",
-  "kind": "actual automated validation using fictional or synthetic data",
-  "not_user_traffic": true,
-  "scenario_count": 10,
-  "passed": 10,
+  "executed_at_utc": "2026-10-10T17:50:34.300954+00:00",
+  "kind": "practical exercises using fictional or synthetic data",
+  "execution_method": "Python script",
+  "scenario_count": 20,
+  "passed": 20,
   "results": [
     {
       "scenario": 1,
       "input": {
-        "threshold": 0.05
+        "threshold": 0.025
       },
       "output_summary": {
-        "accuracy": 0.6833333333333333,
-        "precision": 0.6346153846153846,
+        "accuracy": 0.5833333333333334,
+        "precision": 0.5689655172413793,
         "recall": 1.0,
         "confusion_matrix": {
           "TP": 33,
-          "TN": 8,
-          "FP": 19,
+          "TN": 2,
+          "FP": 25,
           "FN": 0
         }
       },
@@ -27,17 +27,17 @@
     {
       "scenario": 2,
       "input": {
-        "threshold": 0.15
+        "threshold": 0.075
       },
       "output_summary": {
-        "accuracy": 0.8,
-        "precision": 0.7441860465116279,
-        "recall": 0.9696969696969697,
+        "accuracy": 0.7,
+        "precision": 0.6470588235294118,
+        "recall": 1.0,
         "confusion_matrix": {
-          "TP": 32,
-          "TN": 16,
-          "FP": 11,
-          "FN": 1
+          "TP": 33,
+          "TN": 9,
+          "FP": 18,
+          "FN": 0
         }
       },
       "passed": true
@@ -45,17 +45,17 @@
     {
       "scenario": 3,
       "input": {
-        "threshold": 0.25
+        "threshold": 0.125
       },
       "output_summary": {
-        "accuracy": 0.8,
-        "precision": 0.7692307692307693,
-        "recall": 0.9090909090909091,
+        "accuracy": 0.7666666666666667,
+        "precision": 0.7021276595744681,
+        "recall": 1.0,
         "confusion_matrix": {
-          "TP": 30,
-          "TN": 18,
-          "FP": 9,
-          "FN": 3
+          "TP": 33,
+          "TN": 13,
+          "FP": 14,
+          "FN": 0
         }
       },
       "passed": true
@@ -63,7 +63,61 @@
     {
       "scenario": 4,
       "input": {
-        "threshold": 0.35
+        "threshold": 0.175
+      },
+      "output_summary": {
+        "accuracy": 0.8166666666666667,
+        "precision": 0.7619047619047619,
+        "recall": 0.9696969696969697,
+        "confusion_matrix": {
+          "TP": 32,
+          "TN": 17,
+          "FP": 10,
+          "FN": 1
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 5,
+      "input": {
+        "threshold": 0.225
+      },
+      "output_summary": {
+        "accuracy": 0.8166666666666667,
+        "precision": 0.775,
+        "recall": 0.9393939393939394,
+        "confusion_matrix": {
+          "TP": 31,
+          "TN": 18,
+          "FP": 9,
+          "FN": 2
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 6,
+      "input": {
+        "threshold": 0.275
+      },
+      "output_summary": {
+        "accuracy": 0.8166666666666667,
+        "precision": 0.7894736842105263,
+        "recall": 0.9090909090909091,
+        "confusion_matrix": {
+          "TP": 30,
+          "TN": 19,
+          "FP": 8,
+          "FN": 3
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 7,
+      "input": {
+        "threshold": 0.325
       },
       "output_summary": {
         "accuracy": 0.85,
@@ -79,27 +133,63 @@
       "passed": true
     },
     {
-      "scenario": 5,
+      "scenario": 8,
       "input": {
-        "threshold": 0.45
+        "threshold": 0.375
       },
       "output_summary": {
         "accuracy": 0.85,
-        "precision": 0.8529411764705882,
+        "precision": 0.8333333333333334,
+        "recall": 0.9090909090909091,
+        "confusion_matrix": {
+          "TP": 30,
+          "TN": 21,
+          "FP": 6,
+          "FN": 3
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 9,
+      "input": {
+        "threshold": 0.425
+      },
+      "output_summary": {
+        "accuracy": 0.8333333333333334,
+        "precision": 0.8285714285714286,
         "recall": 0.8787878787878788,
         "confusion_matrix": {
           "TP": 29,
-          "TN": 22,
-          "FP": 5,
+          "TN": 21,
+          "FP": 6,
           "FN": 4
         }
       },
       "passed": true
     },
     {
-      "scenario": 6,
+      "scenario": 10,
       "input": {
-        "threshold": 0.55
+        "threshold": 0.475
+      },
+      "output_summary": {
+        "accuracy": 0.8833333333333333,
+        "precision": 0.90625,
+        "recall": 0.8787878787878788,
+        "confusion_matrix": {
+          "TP": 29,
+          "TN": 24,
+          "FP": 3,
+          "FN": 4
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 11,
+      "input": {
+        "threshold": 0.525
       },
       "output_summary": {
         "accuracy": 0.9,
@@ -115,9 +205,27 @@
       "passed": true
     },
     {
-      "scenario": 7,
+      "scenario": 12,
       "input": {
-        "threshold": 0.65
+        "threshold": 0.575
+      },
+      "output_summary": {
+        "accuracy": 0.9,
+        "precision": 0.9354838709677419,
+        "recall": 0.8787878787878788,
+        "confusion_matrix": {
+          "TP": 29,
+          "TN": 25,
+          "FP": 2,
+          "FN": 4
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 13,
+      "input": {
+        "threshold": 0.625
       },
       "output_summary": {
         "accuracy": 0.8666666666666667,
@@ -133,55 +241,127 @@
       "passed": true
     },
     {
-      "scenario": 8,
+      "scenario": 14,
       "input": {
-        "threshold": 0.75
+        "threshold": 0.675
       },
       "output_summary": {
-        "accuracy": 0.7833333333333333,
-        "precision": 0.9166666666666666,
+        "accuracy": 0.8333333333333334,
+        "precision": 0.9259259259259259,
+        "recall": 0.7575757575757576,
+        "confusion_matrix": {
+          "TP": 25,
+          "TN": 25,
+          "FP": 2,
+          "FN": 8
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 15,
+      "input": {
+        "threshold": 0.725
+      },
+      "output_summary": {
+        "accuracy": 0.8,
+        "precision": 0.92,
+        "recall": 0.696969696969697,
+        "confusion_matrix": {
+          "TP": 23,
+          "TN": 25,
+          "FP": 2,
+          "FN": 10
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 16,
+      "input": {
+        "threshold": 0.775
+      },
+      "output_summary": {
+        "accuracy": 0.8,
+        "precision": 0.9565217391304348,
         "recall": 0.6666666666666666,
         "confusion_matrix": {
           "TP": 22,
-          "TN": 25,
-          "FP": 2,
+          "TN": 26,
+          "FP": 1,
           "FN": 11
         }
       },
       "passed": true
     },
     {
-      "scenario": 9,
+      "scenario": 17,
       "input": {
-        "threshold": 0.85
+        "threshold": 0.825
       },
       "output_summary": {
-        "accuracy": 0.7333333333333333,
-        "precision": 0.9473684210526315,
-        "recall": 0.5454545454545454,
+        "accuracy": 0.7666666666666667,
+        "precision": 0.9523809523809523,
+        "recall": 0.6060606060606061,
         "confusion_matrix": {
-          "TP": 18,
+          "TP": 20,
           "TN": 26,
           "FP": 1,
-          "FN": 15
+          "FN": 13
         }
       },
       "passed": true
     },
     {
-      "scenario": 10,
+      "scenario": 18,
       "input": {
-        "threshold": 0.95
+        "threshold": 0.875
       },
       "output_summary": {
-        "accuracy": 0.6666666666666666,
-        "precision": 1.0,
-        "recall": 0.3939393939393939,
+        "accuracy": 0.7166666666666667,
+        "precision": 0.9444444444444444,
+        "recall": 0.5151515151515151,
         "confusion_matrix": {
-          "TP": 13,
+          "TP": 17,
+          "TN": 26,
+          "FP": 1,
+          "FN": 16
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 19,
+      "input": {
+        "threshold": 0.925
+      },
+      "output_summary": {
+        "accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 0.45454545454545453,
+        "confusion_matrix": {
+          "TP": 15,
           "TN": 27,
           "FP": 0,
-          "FN": 20
+          "FN": 18
+        }
+      },
+      "passed": true
+    },
+    {
+      "scenario": 20,
+      "input": {
+        "threshold": 0.975
+      },
+      "output_summary": {
+        "accuracy": 0.6166666666666667,
+        "precision": 1.0,
+        "recall": 0.30303030303030304,
+        "confusion_matrix": {
+          "TP": 10,
+          "TN": 27,
+          "FP": 0,
+          "FN": 23
         }
       },
       "passed": true
