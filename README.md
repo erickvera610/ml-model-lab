@@ -10,6 +10,19 @@ The original logistic-regression learning demo is preserved. The featured versio
 
 Use gradient descent with bounded sigmoid and log-loss. Maximize validation F1 to choose the operating threshold. Freeze it before evaluating the test set. Report ROC AUC, F1, precision, recall, confusion matrix, accuracy and Brier score. Calibration bins expose differences between predicted probability and observed frequency.
 
+## Public-data model comparison
+
+The Python benchmark now uses 1,797 real handwritten-digit images bundled with scikit-learn. It compares standardized logistic regression with a random forest using validation macro F1, then refits the winner and evaluates the untouched test set. Scaling is fitted within the pipeline, never on the complete dataset.
+
+```bash
+python -m pip install -r requirements-benchmark.txt
+python public_benchmark.py
+```
+
+Seed 42: random forest selected; test accuracy **96.67%**, macro F1 **0.9666**, constant-class baseline **10.28%** on 360 held-out images. See [public-results.json](public-results.json) for every split index, versions and confusion matrix. These are digit-recognition results, not student-risk predictions. The browser demo remains the synthetic binary-classification exercise.
+
+Data provenance: [UCI Optical Recognition of Handwritten Digits](https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits), accessed through scikit-learn's bundled `load_digits`. Cite the dataset when reusing it; the repository MIT license applies to project code, not third-party data.
+
 ## Measured evidence
 
 Reproduced with Python by `python benchmark.py`. Execution timestamp is recorded in the JSON report. Synthetic JavaScript values may differ because the random generator differs.
@@ -64,10 +77,8 @@ One dated fictional scenario runs daily through GitHub Actions. `exercises/YYYY-
 
 Independent AI-assisted learning project in Erik Vera's portfolio. No affiliation with FOX, Tesla or BCG. The documentation distinguishes supplied implementation from improvements the learner actually makes. Code is MIT licensed; third-party data provenance is documented separately.
 
-## Featured portfolio
+## Three featured portfolio projects
 
-- [Road Vision Lab](https://github.com/erickvera610/road-vision-lab)
-- [Demand Forecasting Lab](https://github.com/erickvera610/consulting-demand-lab)
-- [Media Prediction Lab](https://github.com/erickvera610/media-content-lab)
-- [Classification Evaluation Lab](https://github.com/erickvera610/ml-model-lab)
-- [Incident Workflow Lab](https://github.com/erickvera610/incident-response-lab)
+- [ML Model Lab](https://github.com/erickvera610/ml-model-lab): model selection and public-data evaluation.
+- [Road Vision Lab](https://github.com/erickvera610/road-vision-lab): image processing and explicit failure analysis.
+- [Media Content Lab](https://github.com/erickvera610/media-content-lab): regression and chronological evaluation.
