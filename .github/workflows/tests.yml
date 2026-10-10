@@ -21,3 +21,9 @@ jobs:
 
       - name: Run twenty practical exercises
         run: python validate_scenarios.py
+
+      - name: Check enhanced browser behavior
+        run: node test_enhanced.cjs
+      - name: Reproduce case study
+        run: python benchmark.py
+

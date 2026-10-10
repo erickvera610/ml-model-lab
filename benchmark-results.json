@@ -1,0 +1,98 @@
+{
+  "project": "ml-model-lab",
+  "executed_at_utc": "2026-10-10T18:37:13.504044+00:00",
+  "execution_method": "Python script",
+  "summary": {
+    "mean_roc_auc": 0.9331013753161608,
+    "mean_f1": 0.8530009372248808,
+    "mean_brier_score": 0.10661534775693635
+  },
+  "runs": [
+    {
+      "seed": 0,
+      "accuracy": 0.84,
+      "precision": 0.8059701492537313,
+      "recall": 0.9473684210526315,
+      "confusion_matrix": {
+        "TP": 54,
+        "TN": 30,
+        "FP": 13,
+        "FN": 3
+      },
+      "f1": 0.8709677419354839,
+      "roc_auc": 0.9167686658506732,
+      "brier_score": 0.11141143806848959,
+      "selected_threshold": 0.35,
+      "baseline_accuracy": 0.57
+    },
+    {
+      "seed": 1,
+      "accuracy": 0.84,
+      "precision": 0.7586206896551724,
+      "recall": 0.9565217391304348,
+      "confusion_matrix": {
+        "TP": 44,
+        "TN": 40,
+        "FP": 14,
+        "FN": 2
+      },
+      "f1": 0.8461538461538461,
+      "roc_auc": 0.927536231884058,
+      "brier_score": 0.11370528506218816,
+      "selected_threshold": 0.3,
+      "baseline_accuracy": 0.46
+    },
+    {
+      "seed": 2,
+      "accuracy": 0.8,
+      "precision": 0.8666666666666667,
+      "recall": 0.7358490566037735,
+      "confusion_matrix": {
+        "TP": 39,
+        "TN": 41,
+        "FP": 6,
+        "FN": 14
+      },
+      "f1": 0.7959183673469387,
+      "roc_auc": 0.9156965074267363,
+      "brier_score": 0.12108114992495034,
+      "selected_threshold": 0.5,
+      "baseline_accuracy": 0.53
+    },
+    {
+      "seed": 3,
+      "accuracy": 0.89,
+      "precision": 0.847457627118644,
+      "recall": 0.9615384615384616,
+      "confusion_matrix": {
+        "TP": 50,
+        "TN": 39,
+        "FP": 9,
+        "FN": 2
+      },
+      "f1": 0.9009009009009009,
+      "roc_auc": 0.9527243589743589,
+      "brier_score": 0.09385393281949829,
+      "selected_threshold": 0.45,
+      "baseline_accuracy": 0.52
+    },
+    {
+      "seed": 4,
+      "accuracy": 0.86,
+      "precision": 0.8888888888888888,
+      "recall": 0.8163265306122449,
+      "confusion_matrix": {
+        "TP": 40,
+        "TN": 46,
+        "FP": 5,
+        "FN": 9
+      },
+      "f1": 0.851063829787234,
+      "roc_auc": 0.952781112444978,
+      "brier_score": 0.09302493290955532,
+      "selected_threshold": 0.65,
+      "baseline_accuracy": 0.49
+    }
+  ],
+  "limitations": "Reproducible prototype evidence, not employer affiliation or production certification."
+}

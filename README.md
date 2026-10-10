@@ -1,16 +1,28 @@
-# ML Model Lab
+# Classification Evaluation Lab
 
-Train logistic regression from scratch on deterministic synthetic data and inspect held-out metrics.
+The original logistic-regression learning demo is preserved. The featured version evaluates classification quality, ranking and probability calibration separately.
 
-An AI-assisted educational portfolio project prepared for Erik Vera's internship learning. This is a working prototype, not production software. Authorship and skills should be represented based on what you can explain and change independently.
+**[Open the live demo](https://erickvera610.github.io/ml-model-lab/)** · [Spanish tutorial](TUTORIAL_ES.md) · [Case study](CASE_STUDY.md) · [Measured results](benchmark-results.json)
 
-## Try in your browser
+## Understand it in one minute
 
-[Open the live demo](https://erickvera610.github.io/ml-model-lab/). The static JavaScript demo runs on the visitor's device and cannot change repository code. The Python implementation below provides the local backend. ML random-number generators differ between runtimes, so exact metrics differ. Tracker browser storage is localStorage; Python storage is SQLite.
+300 training observations → 100 validation observations → selected threshold → 100 test observations
 
-## Run in two minutes
+Use gradient descent with bounded sigmoid and log-loss. Maximize validation F1 to choose the operating threshold. Freeze it before evaluating the test set. Report ROC AUC, F1, precision, recall, confusion matrix, accuracy and Brier score. Calibration bins expose differences between predicted probability and observed frequency.
 
-Requires Python 3.11 or newer; no pip dependencies.
+## Measured evidence
+
+Reproduced with Python by `python benchmark.py`. Execution timestamp is recorded in the JSON report. Synthetic JavaScript values may differ because the random generator differs.
+
+| Measurement | Result |
+|---|---|
+| mean roc auc | 0.9331 |
+| mean f1 | 0.8530 |
+| mean brier score | 0.1066 |
+
+## Run locally
+
+Python 3.11 or 3.12, standard library only. No API keys.
 
 ```bash
 git clone https://github.com/erickvera610/ml-model-lab.git
@@ -18,34 +30,44 @@ cd ml-model-lab
 python app.py
 ```
 
-Open http://127.0.0.1:8000. On Windows, use `py app.py` if `python` is unavailable. Stop with Ctrl+C. Run `python -m unittest discover -v` to execute tests.
+Open http://127.0.0.1:8000. Stop with Ctrl+C. The public browser demo requires no installation.
 
-## Architecture
+## Reproduce and inspect
 
-- `index.html`: responsive accessible interface; renders output with textContent.
-- `app.py`: local HTTP service, `/health`, and validated JSON POST `/api/run`.
-- `core.py`: domain logic separated from transport and presentation.
-- `test_core.py`: deterministic behavior and failure cases.
-- `.github/workflows/tests.yml`: Python 3.11 and 3.12 CI.
-- `TUTORIAL_ES.md`: beginner Spanish guide and interview practice.
+```bash
+python -m unittest discover -v
+node test_enhanced.cjs
+python benchmark.py
+python daily_exercise.py
+```
 
-## API
+Use `core.run({"mode":"evaluate","seed":42})`. `benchmark.py` repeats seeds 0–4 and reports their mean, rather than showcasing a favorable random seed.
 
-POST a JSON object to `/api/run`; inputs are the same fields used by the interface. Responses are JSON. Invalid inputs return 400; unknown paths return 404. GET `/health` returns `{"status":"ok"}`.
+## Read the source
 
-## Design and limits
+- `core.py`: public algorithm entry point and preserved original exercise.
+- `evaluation.py`: featured implementation.
+- `enhanced.js`: browser implementation, readable without a build system.
+- `app.py`: localhost HTTP API.
+- `test_*.py` and `test_enhanced.cjs`: behavior and edge cases.
+- `benchmark.py`: evidence generator.
 
-Cada muestra tiene dos variables y una etiqueta 0 o 1. La función sigmoide convierte una suma ponderada en probabilidad. El descenso de gradiente ajusta pesos para reducir log loss. Primero separo 240 muestras de entrenamiento y 60 de prueba. La prueba nunca ajusta los pesos. El umbral cambia falsos positivos y negativos. La curva muestra pérdida de entrenamiento; no mide generalización. Los datos son sintéticos y no justifican resultados comerciales.
+## Limitations
 
-The built-in HTTP server is for a local demonstration. There is no authentication, rate limiting, or public production deployment. Never enter personal application records on a publicly exposed demo. Bind to localhost by default. For Codespaces only, run `HOST=0.0.0.0 python app.py` and keep the forwarded port private; usage may consume your GitHub quota.
+Synthetic binary labels and two features are deliberately simple. Five seeds do not replace cross-validation on real data. Calibration estimates use only 100 test observations. F1 reflects one error tradeoff; production threshold choice should reflect business costs.
 
-## Review and contribution workflow
+## Daily practical exercises
 
-Create a feature branch, make one small change, run the tests, commit it, push the branch, and open a pull request. Explain the change and validation. Do not fabricate collaboration or commit history. Suggested first improvement: add a new input option with one behavior test and update this README.
+One dated fictional scenario runs daily through GitHub Actions. `exercises/YYYY-MM-DD/result.json` preserves inputs and outputs; `samples/latest.json` holds the latest input. Bot-authored report commits document script execution, not manual daily development. [Daily Spanish guide](EJERCICIOS_DIARIOS_ES.md).
 
-## References
+## Authorship and relevance
 
-- https://docs.python.org/3/library/http.server.html
-- https://docs.github.com/en/actions/tutorials/build-and-test-code/python
+Independent AI-assisted learning project in Erik Vera's portfolio. No affiliation with FOX, Tesla or BCG. The documentation distinguishes supplied implementation from improvements the learner actually makes. Code is MIT licensed; third-party data provenance is documented separately.
 
-License: MIT.
+## Featured portfolio
+
+- [Road Vision Lab](https://github.com/erickvera610/road-vision-lab)
+- [Demand Forecasting Lab](https://github.com/erickvera610/consulting-demand-lab)
+- [Media Prediction Lab](https://github.com/erickvera610/media-content-lab)
+- [Classification Evaluation Lab](https://github.com/erickvera610/ml-model-lab)
+- [Incident Workflow Lab](https://github.com/erickvera610/incident-response-lab)
