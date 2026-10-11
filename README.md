@@ -1,5 +1,30 @@
 # Classification Evaluation Lab
 
+![Tests](https://github.com/erickvera610/ml-model-lab/actions/workflows/tests.yml/badge.svg)
+
+## New: trained neural network with public inference demo
+
+**[Inspect the neural demo](https://erickvera610.github.io/ml-model-lab/neural-demo.html)** · [Reviewer evidence](RECRUITER_GUIDE.md) · [Training report](artifacts/neural-results.json) · [CI tests](https://github.com/erickvera610/ml-model-lab/actions/workflows/tests.yml)
+
+Trained a 64 → 64 → 10 ReLU/softmax neural network on real 8 × 8 digit images. Hidden width is selected using outer validation macro F1; early stopping uses an internal training-only fraction. The test set remains outside selection.
+
+Seed 42 accuracy: **98.06%** on 360 held-out images. Logistic reference: **98.06%**. Three-seed mean: **96.48%**. This experiment shows neural training, not evidence that a neural model is always better. The earlier random-forest report remains separately available.
+
+The public demo loads the actual Python-exported numerical weights and shows held-out examples plus every reported seed-42 error. The local `/neural` page uses the Python inference API with the same artifact. Parameter checksums and cross-language parity tests connect report, artifact and inference.
+
+```bash
+python -m pip install -r requirements-benchmark.txt
+python neural_train.py
+python build_demo_data.py
+python -m unittest discover -v
+node test_neural.cjs
+python app.py
+# Open http://127.0.0.1:8000/neural
+```
+
+This is a small MLP with one hidden layer, not an LLM or large-scale deep-learning system. Hand-drawn inputs may differ from the measured dataset. Use [neural_train.py](neural_train.py) to reproduce the model; do not repeatedly change settings based on test results.
+
+
 The original logistic-regression learning demo is preserved. The featured version evaluates classification quality, ranking and probability calibration separately.
 
 **[Open the live demo](https://erickvera610.github.io/ml-model-lab/)** · [Spanish tutorial](TUTORIAL_ES.md) · [Case study](CASE_STUDY.md) · [Measured results](benchmark-results.json)
@@ -35,7 +60,7 @@ Reproduced with Python by `python benchmark.py`. Execution timestamp is recorded
 
 ## Run locally
 
-Python 3.11 or 3.12, standard library only. No API keys.
+Python 3.11 or 3.12. Core synthetic exercises use the standard library; the real-data models require the declared Python dependencies. No API keys.
 
 ```bash
 git clone https://github.com/erickvera610/ml-model-lab.git
