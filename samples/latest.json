@@ -1,3 +1,5 @@
 {
-  "threshold": 0.38
+  "threshold": 0.493,
+  "seed": 20261011,
+  "mode": "evaluate"
 }
