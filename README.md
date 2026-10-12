@@ -2,6 +2,8 @@
 
 ![Tests](https://github.com/erickvera610/ml-model-lab/actions/workflows/tests.yml/badge.svg)
 
+> **Recruiter quick view:** real public data, held-out evaluation, neural-network training, PyTorch benchmark, robustness testing, browser inference, unit tests, and CI. Start with [RECRUITER_OVERVIEW.md](RECRUITER_OVERVIEW.md), [PORTFOLIO_EVIDENCE.md](PORTFOLIO_EVIDENCE.md), the [neural demo](https://erickvera610.github.io/ml-model-lab/neural-demo.html), `pytorch_digits.py`, and `robustness_benchmark.py`.
+
 ## New: trained neural network with public inference demo
 
 **[Inspect the neural demo](https://erickvera610.github.io/ml-model-lab/neural-demo.html)** · [Reviewer evidence](RECRUITER_GUIDE.md) · [Training report](artifacts/neural-results.json) · [CI tests](https://github.com/erickvera610/ml-model-lab/actions/workflows/tests.yml)
@@ -22,8 +24,19 @@ python app.py
 # Open http://127.0.0.1:8000/neural
 ```
 
-This is a small MLP with one hidden layer, not an LLM or large-scale deep-learning system. Hand-drawn inputs may differ from the measured dataset. Use [neural_train.py](neural_train.py) to reproduce the model; do not repeatedly change settings based on test results.
+### PyTorch + robustness extension
 
+The repository now also includes `pytorch_digits.py`, a separate PyTorch MLP experiment on the same public digits dataset, and `robustness_benchmark.py`, which measures held-out degradation under fixed noise, salt-and-pepper corruption, center occlusion, and brightness reduction. These extensions are deliberately separate from the original benchmark so a reviewer can compare frameworks and inspect failure behavior without rewriting the original evidence.
+
+```bash
+python -m pip install -r requirements-pytorch.txt
+python pytorch_digits.py
+python robustness_benchmark.py
+```
+
+Generated PyTorch and robustness metrics are written under `artifacts/`; do not report them until the scripts have been run in the current environment.
+
+This is a small MLP with one hidden layer, not an LLM or large-scale deep-learning system. Hand-drawn inputs may differ from the measured dataset. Use [neural_train.py](neural_train.py) to reproduce the model; do not repeatedly change settings based on test results.
 
 The original logistic-regression learning demo is preserved. The featured version evaluates classification quality, ranking and probability calibration separately.
 
@@ -89,6 +102,8 @@ Use `core.run({"mode":"evaluate","seed":42})`. `benchmark.py` repeats seeds 0–
 - `app.py`: localhost HTTP API.
 - `test_*.py` and `test_enhanced.cjs`: behavior and edge cases.
 - `benchmark.py`: evidence generator.
+- `pytorch_digits.py`: PyTorch neural baseline on the same public digit data.
+- `robustness_benchmark.py`: fixed held-out corruption protocol.
 
 ## Limitations
 
