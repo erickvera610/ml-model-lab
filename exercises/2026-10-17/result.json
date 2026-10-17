@@ -1,0 +1,295 @@
+{
+  "project": "ml-model-lab",
+  "date_utc": "2026-10-17",
+  "executed_at_utc": "2026-10-17T15:39:37.248513+00:00",
+  "data_kind": "fictional/synthetic",
+  "execution_method": "Python script",
+  "seed": 20261017,
+  "input": {
+    "threshold": 0.324,
+    "seed": 20261017,
+    "mode": "evaluate"
+  },
+  "output": {
+    "metrics": {
+      "accuracy": 0.83,
+      "precision": 0.8571428571428571,
+      "recall": 0.8076923076923077,
+      "confusion_matrix": {
+        "TP": 42,
+        "TN": 41,
+        "FP": 7,
+        "FN": 10
+      },
+      "f1": 0.8316831683168318,
+      "roc_auc": 0.9286858974358975,
+      "brier_score": 0.11018135274471735
+    },
+    "baseline_accuracy": 0.52,
+    "selected_threshold": 0.55,
+    "threshold_selection": [
+      {
+        "threshold": 0.05,
+        "validation_f1": 0.7832167832167831
+      },
+      {
+        "threshold": 0.1,
+        "validation_f1": 0.8115942028985507
+      },
+      {
+        "threshold": 0.15,
+        "validation_f1": 0.8396946564885496
+      },
+      {
+        "threshold": 0.2,
+        "validation_f1": 0.8593749999999999
+      },
+      {
+        "threshold": 0.25,
+        "validation_f1": 0.8617886178861788
+      },
+      {
+        "threshold": 0.3,
+        "validation_f1": 0.8688524590163934
+      },
+      {
+        "threshold": 0.35,
+        "validation_f1": 0.8739495798319328
+      },
+      {
+        "threshold": 0.4,
+        "validation_f1": 0.9107142857142857
+      },
+      {
+        "threshold": 0.45,
+        "validation_f1": 0.9090909090909091
+      },
+      {
+        "threshold": 0.5,
+        "validation_f1": 0.9142857142857143
+      },
+      {
+        "threshold": 0.55,
+        "validation_f1": 0.923076923076923
+      },
+      {
+        "threshold": 0.6,
+        "validation_f1": 0.9019607843137255
+      },
+      {
+        "threshold": 0.65,
+        "validation_f1": 0.88
+      },
+      {
+        "threshold": 0.7,
+        "validation_f1": 0.8453608247422679
+      },
+      {
+        "threshold": 0.75,
+        "validation_f1": 0.8453608247422679
+      },
+      {
+        "threshold": 0.8,
+        "validation_f1": 0.8210526315789474
+      },
+      {
+        "threshold": 0.85,
+        "validation_f1": 0.7272727272727273
+      },
+      {
+        "threshold": 0.9,
+        "validation_f1": 0.617283950617284
+      },
+      {
+        "threshold": 0.95,
+        "validation_f1": 0.4657534246575342
+      }
+    ],
+    "train_samples": 300,
+    "validation_samples": 100,
+    "test_samples": 100,
+    "training_loss": [
+      0.6931471805599467,
+      0.48047242683974106,
+      0.43095954711689954,
+      0.41206444498532796,
+      0.40301769954165095,
+      0.3981257565193358,
+      0.3952752535665484,
+      0.39352919356187976,
+      0.3924211742502145,
+      0.39169951055477026,
+      0.3912201248836443,
+      0.39089677825328223,
+      0.39067603964769515,
+      0.3905238929987904,
+      0.39041820734570265,
+      0.3903443296391162,
+      0.3902924184787758,
+      0.3902557862086061,
+      0.3902298441232438,
+      0.3902114183572797
+    ],
+    "weights": [
+      0.20756392347487973,
+      1.6692701416494076,
+      -1.3419036427952344
+    ],
+    "calibration": [
+      {
+        "range": [
+          0.0,
+          0.2
+        ],
+        "count": 24,
+        "mean_probability": 0.06986865281664123,
+        "observed_positive_rate": 0.041666666666666664
+      },
+      {
+        "range": [
+          0.2,
+          0.4
+        ],
+        "count": 16,
+        "mean_probability": 0.2979351523858945,
+        "observed_positive_rate": 0.1875
+      },
+      {
+        "range": [
+          0.4,
+          0.6
+        ],
+        "count": 13,
+        "mean_probability": 0.4975769207511807,
+        "observed_positive_rate": 0.5384615384615384
+      },
+      {
+        "range": [
+          0.6,
+          0.8
+        ],
+        "count": 15,
+        "mean_probability": 0.7071455657431913,
+        "observed_positive_rate": 0.6666666666666666
+      },
+      {
+        "range": [
+          0.8,
+          1.0
+        ],
+        "count": 32,
+        "mean_probability": 0.9308795971781126,
+        "observed_positive_rate": 0.96875
+      }
+    ],
+    "roc_curve": [
+      {
+        "threshold": 0,
+        "tpr": 1.0,
+        "fpr": 1.0
+      },
+      {
+        "threshold": 0.05,
+        "tpr": 1.0,
+        "fpr": 0.75
+      },
+      {
+        "threshold": 0.1,
+        "tpr": 0.9807692307692307,
+        "fpr": 0.6666666666666666
+      },
+      {
+        "threshold": 0.15,
+        "tpr": 0.9807692307692307,
+        "fpr": 0.6041666666666666
+      },
+      {
+        "threshold": 0.2,
+        "tpr": 0.9807692307692307,
+        "fpr": 0.5208333333333334
+      },
+      {
+        "threshold": 0.25,
+        "tpr": 0.9807692307692307,
+        "fpr": 0.4583333333333333
+      },
+      {
+        "threshold": 0.3,
+        "tpr": 0.9807692307692307,
+        "fpr": 0.3125
+      },
+      {
+        "threshold": 0.35,
+        "tpr": 0.9615384615384616,
+        "fpr": 0.2916666666666667
+      },
+      {
+        "threshold": 0.4,
+        "tpr": 0.9230769230769231,
+        "fpr": 0.25
+      },
+      {
+        "threshold": 0.45,
+        "tpr": 0.9230769230769231,
+        "fpr": 0.22916666666666666
+      },
+      {
+        "threshold": 0.5,
+        "tpr": 0.8461538461538461,
+        "fpr": 0.1875
+      },
+      {
+        "threshold": 0.55,
+        "tpr": 0.8076923076923077,
+        "fpr": 0.14583333333333334
+      },
+      {
+        "threshold": 0.6,
+        "tpr": 0.7884615384615384,
+        "fpr": 0.125
+      },
+      {
+        "threshold": 0.65,
+        "tpr": 0.7307692307692307,
+        "fpr": 0.10416666666666667
+      },
+      {
+        "threshold": 0.7,
+        "tpr": 0.7115384615384616,
+        "fpr": 0.08333333333333333
+      },
+      {
+        "threshold": 0.75,
+        "tpr": 0.6538461538461539,
+        "fpr": 0.041666666666666664
+      },
+      {
+        "threshold": 0.8,
+        "tpr": 0.5961538461538461,
+        "fpr": 0.020833333333333332
+      },
+      {
+        "threshold": 0.85,
+        "tpr": 0.5192307692307693,
+        "fpr": 0.020833333333333332
+      },
+      {
+        "threshold": 0.9,
+        "tpr": 0.46153846153846156,
+        "fpr": 0.020833333333333332
+      },
+      {
+        "threshold": 0.95,
+        "tpr": 0.2692307692307692,
+        "fpr": 0.0
+      },
+      {
+        "threshold": 1,
+        "tpr": 0.0,
+        "fpr": 0.0
+      }
+    ],
+    "note": "Synthetic binary labels. Threshold chosen on validation F1; test held out. Calibration bins are descriptive; no real-world accuracy claim."
+  },
+  "completed": true
+}
