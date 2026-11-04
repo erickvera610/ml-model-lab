@@ -4,6 +4,10 @@
 
 > **Recruiter quick view:** real public data, held-out evaluation, neural-network training, PyTorch benchmark, robustness testing, browser inference, unit tests, and CI. Start with [RECRUITER_OVERVIEW.md](RECRUITER_OVERVIEW.md), [PORTFOLIO_EVIDENCE.md](PORTFOLIO_EVIDENCE.md), the [neural demo](https://erickvera610.github.io/ml-model-lab/neural-demo.html), `pytorch_digits.py`, and `robustness_benchmark.py`.
 
+## Robustness audit — November 2026
+
+[Inspect the paired robustness audit](ROBUSTNESS_AUDIT.md): reproducible corruption seeds, input/model hashes, per-class recall and all 360 paired predictions. Clean accuracy was 98.06%; central 2×2 occlusion reduced it to 85.28%. Twenty Python tests passed locally. This extends evaluation and failure analysis; it does not claim improved model accuracy.
+
 ## New: trained neural network with public inference demo
 
 **[Inspect the neural demo](https://erickvera610.github.io/ml-model-lab/neural-demo.html)** · [Reviewer evidence](RECRUITER_GUIDE.md) · [Training report](artifacts/neural-results.json) · [CI tests](https://github.com/erickvera610/ml-model-lab/actions/workflows/tests.yml)
