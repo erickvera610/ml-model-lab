@@ -18,6 +18,12 @@ Results: clean 98.06%, Gaussian noise 33.89%, salt/pepper 60.56%, center occlusi
 
 Verified published English LinkedIn update: https://www.linkedin.com/feed/update/urn:li:share:7523849460976680960/
 
+## 2026-11-09 — Research Search
+
+Repaired the robustness benchmark to use exported-model inference and count out-of-vocabulary abstentions as misses. Evaluated 30,135 official held-out sentences. Macro F1 was 0.7025 clean and 0.6816 under synthetic token dropout; predictions changed on 9.24%. All 11 Python tests passed, plus Python/browser parity. Code and results: https://github.com/erickvera610/research-search/commit/722fe232433b0082b6ae173b3ca2a75845993e50
+
+Published English LinkedIn update: https://www.linkedin.com/feed/update/urn:li:activity:7525622482645745664/
+
 ## Next turn
 
-Research Search. Inspect existing generative components before choosing whether to develop a genuine generative-AI extension there or schedule a separate project. GenAI work has not been implemented in this turn. Then Road Vision Lab, Media Content Lab, Consulting Demand Lab, and return to ML Model Lab after covering the portfolio. A separate GenAI project remains requested if no existing suitable one is found. Do not describe pending work as delivered.
+Road Vision Lab, followed by Media Content Lab and Consulting Demand Lab. The Research Search LinkedIn project description update is pending. The separate GenAI project remains pending; the existing Research Search components reviewed are supervised NLP and lexical retrieval.
