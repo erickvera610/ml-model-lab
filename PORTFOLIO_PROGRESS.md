@@ -36,6 +36,18 @@ LinkedIn Road Vision project description saved and verified. English post publis
 
 Next scheduled execution: November 13, 2026 at 19:00 America/Indianapolis (this run was scheduled November 10 at 09:00). Next hour after that: 15:00.
 
+## 2026-11-13 — Media Content Lab
+
+Reconfirmed all five LinkedIn projects; reviewed prior Media Content post activity 7517223254189608960. Repaired temporal_robustness.py: split unique publication-day groups instead of rows. Previous diagnostic boundaries shared days 102 and 58; new boundaries share none. Added fixed train+validation median baseline per period, source row IDs, dataset/model/code hashes and versions. Added test_temporal.py and TEMPORAL_AUDIT.md; README updated. Existing CI already executes this script.
+
+All 9,112 held-out articles assigned exactly once. Early/middle/late samples 2,979/3,317/2,816; log-MAE 0.667179/0.624934/0.630076 against baseline 0.696478/0.631237/0.645239; reductions 4.21%/1.00%/2.35%. This repairs diagnostics, not model accuracy. All 18 Python tests and three JavaScript checks passed locally. No remote CI completion claimed.
+
+Public report: https://github.com/erickvera610/media-content-lab/blob/main/TEMPORAL_AUDIT.md
+Latest commit: 74f2c9552acc49c7a030ca447aa2b2d9f2f38233
+LinkedIn project description saved and verified. English post published and verified: https://www.linkedin.com/feed/update/urn:li:activity:7527159340412223488/
+
+Next scheduled execution: November 16, 2026 at 15:00 America/Indianapolis. Following hour: 09:00.
+
 ## Next turn
 
-Media Content Lab, followed by Consulting Demand Lab. Then prioritize a separate functional GenAI project before starting another improvement cycle. The Research Search LinkedIn project description update is pending. The separate GenAI project remains pending; the existing Research Search components reviewed are supervised NLP and lexical retrieval.
+Consulting Demand Lab. Then prioritize a separate functional GenAI project before starting another improvement cycle. The Research Search LinkedIn project description update is pending. The separate GenAI project remains pending; the existing Research Search components reviewed are supervised NLP and lexical retrieval.
