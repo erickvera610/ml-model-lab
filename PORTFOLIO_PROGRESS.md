@@ -48,6 +48,18 @@ LinkedIn project description saved and verified. English post published and veri
 
 Next scheduled execution: November 16, 2026 at 15:00 America/Indianapolis. Following hour: 09:00.
 
+## 2026-11-16 — Consulting Demand Lab
+
+Reconfirmed five LinkedIn projects and reviewed prior demand post activity 7518299043677011968. Added forecast_history.py: explicit target date plus exactly 14 preceding daily counts, calendar/lag feature construction, validation for gaps, duplicates, stale windows, target/future observations and invalid counts. New CLI, five unit-test methods, reproducible sample, validate_history.py and raw evidence; README and CI updated. Existing raw-feature API and trained model unchanged.
+
+All 17 Python tests and three JavaScript checks passed locally. Reconstructed all 144 archived held-out forecasts from checksum-verified UCI day.csv: maximum prediction difference 0.0. Sample target 2012-08-10: forecast 6668.674175, actual 5786, absolute error 882.674175. No accuracy improvement claimed; Ridge remains the better recorded test model.
+
+Public evidence: https://github.com/erickvera610/consulting-demand-lab/blob/main/HISTORY_FORECAST.md
+Latest commit: 9396fe92b3e2ee568b7c7d80b8657435b99b35f7
+LinkedIn project description saved and verified. English advance published and verified: https://www.linkedin.com/feed/update/urn:li:activity:7528185503553048577/
+
+Next scheduled execution: November 19, 2026 at 09:00 America/Indianapolis; following hour 19:00.
+
 ## Next turn
 
-Consulting Demand Lab. Then prioritize a separate functional GenAI project before starting another improvement cycle. The Research Search LinkedIn project description update is pending. The separate GenAI project remains pending; the existing Research Search components reviewed are supervised NLP and lexical retrieval.
+The five original projects have each received a development turn. Next: create a separate functional GenAI project, after checking current repositories for a suitable existing one. Include real generation, reproducible example, tests and honest evaluation; do not treat a mock or proposal as implemented. The Research Search LinkedIn project description update is pending. The separate GenAI project remains pending; the existing Research Search components reviewed are supervised NLP and lexical retrieval.
