@@ -60,6 +60,21 @@ LinkedIn project description saved and verified. English advance published and v
 
 Next scheduled execution: November 19, 2026 at 09:00 America/Indianapolis; following hour 19:00.
 
+## 2026-11-19 — Research Search: functional GenAI extension
+
+Reconfirmed exactly five LinkedIn projects and reviewed the November 9 Research Search post. The repository connector could edit existing public repositories but did not expose repository creation; GitHub browser creation required sign-in. Worked on ONE project: added an optional GenAI module to Research Search instead of claiming a separate repository was created.
+
+Implemented genai_qa.py: existing TF-IDF retriever plus real local pretrained Google FLAN-T5-small generation using PyTorch/Transformers. Pinned model revision, CPU greedy decoding, question/context length validation, no-match gate and original retrieval sources returned in JSON. Added five unit-test methods, eight development diagnostics, raw outputs with versions/hashes, GENAI.md, README entry and optional manual CI workflow.
+
+All 16 Python tests and both JavaScript suites passed locally. Real generation ran on seven questions; one zero-overlap case skipped generation. Six of eight predefined expected-fragment checks passed. Preserved failures: incomplete software-practice answer and incorrect abstention on Sobel. Example: classification-probability question generated "Logistic regression". Tiny authored-note development diagnostic, not held-out general accuracy; no factuality or verified-citation claim. No remote CI completion claimed.
+
+Public code and reproduction: https://github.com/erickvera610/research-search/blob/main/GENAI.md
+Implementation commit: 9e9de30fe41ec29c8092db7f7ba00813179f2f14
+Research Search LinkedIn description updated and save confirmed (resolves prior pending description).
+English post published and visually verified: https://www.linkedin.com/feed/update/urn:li:activity:7529183750660763648/
+
+Next scheduled execution: November 22, 2026 at 19:00 America/Indianapolis; following hour 15:00.
+
 ## Next turn
 
-The five original projects have each received a development turn. Next: create a separate functional GenAI project, after checking current repositories for a suitable existing one. Include real generation, reproducible example, tests and honest evaluation; do not treat a mock or proposal as implemented. The Research Search LinkedIn project description update is pending. The separate GenAI project remains pending; the existing Research Search components reviewed are supervised NLP and lexical retrieval.
+Resume rotation with ML Model Lab for a new substantive improvement, reviewing its latest code and posts first. Research Search now has a functional, evaluated GenAI component; a separate GenAI repository was not created. Further GenAI evaluation should eventually use independent questions and assess source support, incomplete answers, unsupported questions and adversarial inputs. Do not repeat the eight-case development result as a general accuracy benchmark.
