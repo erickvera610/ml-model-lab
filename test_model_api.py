@@ -18,7 +18,7 @@ class ModelAPITests(unittest.TestCase):
         self.assertEqual(response['prediction'],row['predicted'])
         with urllib.request.urlopen(self.url+'/neural') as response:self.assertEqual(response.status,200)
     def test_bad_inputs_fail_and_server_recovers(self):
-        for payload in [{},[],{'pixels':None}]:
+        for payload in [{},[],{'pixels':None},{'pixels':['0']*64},{'pixels':[True]+[0]*63}]:
             with self.assertRaises(urllib.error.HTTPError) as error:self.post(payload)
             self.assertEqual(error.exception.code,400)
         with urllib.request.urlopen(self.url+'/health') as response:self.assertEqual(response.status,200)

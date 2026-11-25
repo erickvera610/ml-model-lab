@@ -22,6 +22,10 @@ def export(model):
         'note':'Numeric parameters only. UCI 8x8 digit images; hand-drawn input may differ from training data.'}
 
 def infer(artifact,pixels):
+    raw=np.asarray(pixels)
+    # Reject coercible strings, booleans and complex/object arrays, as JS does.
+    if raw.dtype.kind not in "iuf" or (isinstance(pixels,(list,tuple)) and any(isinstance(v,(bool,np.bool_)) for v in pixels)):
+        raise ValueError("Pixels must be real numbers, not strings or booleans")
     x=np.asarray(pixels,dtype=float)
     if x.shape!=(64,) or not np.isfinite(x).all() or (x<0).any() or (x>16).any():raise ValueError('Exactly 64 finite pixel intensities in [0,16] required')
     x=(x-np.array(artifact['mean']))/np.array(artifact['scale'])

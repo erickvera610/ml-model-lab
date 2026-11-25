@@ -4,6 +4,10 @@
 
 > **Recruiter quick view:** real public data, held-out evaluation, neural-network training, PyTorch benchmark, robustness testing, browser inference, unit tests, and CI. Start with [RECRUITER_OVERVIEW.md](RECRUITER_OVERVIEW.md), [PORTFOLIO_EVIDENCE.md](PORTFOLIO_EVIDENCE.md), the [neural demo](https://erickvera610.github.io/ml-model-lab/neural-demo.html), `pytorch_digits.py`, and `robustness_benchmark.py`.
 
+## Inference input contract — November 25, 2026
+
+[Reproduce the Python/JavaScript input validation fix](INPUT_CONTRACT.md). Numeric strings and booleans are now rejected consistently. Seven shared fixtures agree; all 16 archived example predictions are preserved. All 23 Python tests and three JavaScript suites passed locally. This improves API consistency, not model accuracy.
+
 ## Robustness audit — November 2026
 
 [Inspect the paired robustness audit](ROBUSTNESS_AUDIT.md): reproducible corruption seeds, input/model hashes, per-class recall and all 360 paired predictions. Clean accuracy was 98.06%; central 2×2 occlusion reduced it to 85.28%. Twenty Python tests passed locally. This extends evaluation and failure analysis; it does not claim improved model accuracy.

@@ -1,0 +1,54 @@
+{
+  "scope": "Input contract regression; not model accuracy improvement",
+  "cases": [
+    {
+      "case": "numeric_zeros",
+      "legacy_python_accepted": true,
+      "python_accepted": true,
+      "javascript_accepted": true
+    },
+    {
+      "case": "numeric_strings",
+      "legacy_python_accepted": true,
+      "python_accepted": false,
+      "javascript_accepted": false
+    },
+    {
+      "case": "booleans",
+      "legacy_python_accepted": true,
+      "python_accepted": false,
+      "javascript_accepted": false
+    },
+    {
+      "case": "mixed_boolean",
+      "legacy_python_accepted": true,
+      "python_accepted": false,
+      "javascript_accepted": false
+    },
+    {
+      "case": "nulls",
+      "legacy_python_accepted": false,
+      "python_accepted": false,
+      "javascript_accepted": false
+    },
+    {
+      "case": "too_short",
+      "legacy_python_accepted": false,
+      "python_accepted": false,
+      "javascript_accepted": false
+    },
+    {
+      "case": "out_of_range",
+      "legacy_python_accepted": false,
+      "python_accepted": false,
+      "javascript_accepted": false
+    }
+  ],
+  "archived_predictions_checked": 16,
+  "unchanged_predictions": 16,
+  "sha256": {
+    "neural_train.py": "326b03e9f9f9fb8b3d3df00a3dba858760828a17094c61f7988981399070b069",
+    "docs/neural.js": "bb5df314c7eefdcc1b6e62fb7d46edf249d98db68a25791c30cc09d046c63226",
+    "artifacts/neural-model.json": "366392a3078319e182f8a642662ea4d812c6710bf67d504bf6139bca3f5a7824"
+  }
+}
